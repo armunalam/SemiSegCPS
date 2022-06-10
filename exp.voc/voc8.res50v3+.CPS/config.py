@@ -23,10 +23,10 @@ remoteip = os.popen('pwd').read()
 if os.getenv('volna') is not None:
     C.volna = os.environ['volna']
 else:
-    C.volna = '/home/cxk/msra_container/' # the path to the data dir.
+    C.volna = '/content/drive/MyDrive/ColabFiles/semiseg/Data/dataset/' # '/home/cxk/msra_container/' # the path to the data dir.
 
 """please config ROOT_dir and user when u first using"""
-C.repo_name = 'TorchSemiSeg'
+C.repo_name = 'content'
 C.abs_dir = osp.realpath(".")
 C.this_dir = C.abs_dir.split(osp.sep)[-1]
 
