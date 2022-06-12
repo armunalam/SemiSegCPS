@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 nvidia-smi
 
-export volna="path to your data dir"
+export volna="/content/drive/MyDrive/ColabFiles/semiseg/Data/dataset/"
 export NGPUS=4
-export OUTPUT_PATH="path to your output dir"
+export OUTPUT_PATH="/content/outputs_all"
 export snapshot_dir=$OUTPUT_PATH/snapshot
 
 export batch_size=8
