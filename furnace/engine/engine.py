@@ -67,7 +67,7 @@ class Engine(object):
             self.distributed = int(os.environ['WORLD_SIZE']) >= 1
 
         if self.distributed:
-            self.local_rank = self.args.local_rank
+            self.local_rank = 0 # self.args.local_rank
             self.world_size = int(os.environ['WORLD_SIZE'])
             torch.cuda.set_device(self.local_rank)
             os.environ['MASTER_PORT'] = self.args.port

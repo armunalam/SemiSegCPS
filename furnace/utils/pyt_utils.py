@@ -133,11 +133,11 @@ def parse_devices(input_devices):
     devices = []
     for d in input_devices.split(','):
         if '-' in d:
-            start_device, end_device = d.split('-')[0], d.split('-')[1]
-            assert start_device != ''
-            assert end_device != ''
-            start_device, end_device = int(start_device), int(end_device)
-            assert start_device < end_device
+            start_device, end_device = 0, 0 # d.split('-')[0], d.split('-')[1]
+            # assert start_device != ''
+            # assert end_device != ''
+            # start_device, end_device = int(start_device), int(end_device)
+            assert start_device <= end_device
             assert end_device < torch.cuda.device_count()
             for sd in range(start_device, end_device + 1):
                 devices.append(sd)
